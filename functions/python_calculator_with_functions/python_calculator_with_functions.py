@@ -9,6 +9,7 @@ def button_press(num):
 
     equation_label.set(equation_text)
 
+
 def equals():
 
     global equation_text
@@ -32,6 +33,7 @@ def equals():
         equation_label.set("arithmetic error")
 
         equation_text = ""
+
 
 def clear():
 
