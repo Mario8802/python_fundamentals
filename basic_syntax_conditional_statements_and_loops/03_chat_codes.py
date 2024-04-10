@@ -1,6 +1,6 @@
 number_of_messages = int(input())
 sms = ""
-for current_message in range(number_of_messages):
+for _ in range(number_of_messages):
     number = int(input())
 
     if number == 88:
