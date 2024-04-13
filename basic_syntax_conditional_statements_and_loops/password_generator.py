@@ -1,8 +1,3 @@
-
-Certainly! Here's a simple Python script that generates a random password with strong cybersecurity characteristics, such as a mix of uppercase and lowercase letters, digits, and special characters:
-
-python
-Copy code
 import random
 import string
 
