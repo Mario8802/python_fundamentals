@@ -1,11 +1,14 @@
-age = int(input())
-drink = ""
-if age <= 14:
-    drink = "toddy"
-elif age <= 18:
-    drink = "coke"
-elif age <= 21:
-    drink = "beer"
-else:
-    drink = "whisky"
-print(f"drink {drink}")
+def persons_age(age: int) -> str:
+    if age <= 14:
+        return "drink toddy"
+    elif age <= 18:
+        return "drink coke"
+    elif age < 21:
+        return "drink beer"
+    elif age >= 21:
+        return "drink whisky"
+
+
+age_customer = int(input())
+
+print(persons_age(age_customer))
