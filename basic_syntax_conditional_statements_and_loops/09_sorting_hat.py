@@ -1,18 +1,18 @@
 while True:
-    user_input = input()
-    if user_input == "Welcome!":
+    name = input()
+    if name == "Welcome!":
         print("Welcome to Hogwarts.")
         break
 
-    if user_input == "Voldemort":
+    if name == "Voldemort":
         print("You must not speak of that name!")
-        break
+        exit()
+    if len(name) < 5:
+        print(f"{name} goes to Gryffindor.")
+    elif len(name) == 5:
+        print(f"{name} goes to Slytherin.")
+    elif len(name) == 6:
+        print(f"{name} goes to Ravenclaw.")
+    elif len(name) > 6:
+        print(f"{name} goes to Hufflepuff.")
 
-    if len(user_input) < 5:
-        print(f"{user_input} goes to Gryffindor.")
-    elif len(user_input) == 5:
-        print(f"{user_input} goes to Slytherin.")
-    elif len(user_input) == 6:
-        print(f"{user_input} goes to Ravenclaw.")
-    else:
-        print(f"{user_input} goes to Hufflepuff.")
