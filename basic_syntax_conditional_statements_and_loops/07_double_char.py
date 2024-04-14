@@ -8,3 +8,23 @@ while current_string != "End":
         print(new_string)
 
     current_string = input()
+
+===================================================================
+
+new_string = ""
+
+while True:
+    current_string = input()
+
+    if current_string == "End":
+        break
+
+    if current_string != "SoftUni":
+        doubled_string = ""
+        for character in current_string:
+            doubled_string += character * 2
+
+        new_string += doubled_string + "\n"
+
+print(new_string, end="")
+
