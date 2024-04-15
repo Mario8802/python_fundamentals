@@ -1,8 +1,8 @@
 from math import ceil
 
 
-persons = int(input())
+people = int(input())
 capacity = int(input())
-courses = ceil(persons / capacity)
+count_trips = ceil(people / capacity)
 
-print(courses)
+print(count_trips)
