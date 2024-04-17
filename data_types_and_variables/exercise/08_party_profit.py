@@ -1,6 +1,3 @@
-
-
-
 number_of_companions = int(input())
 days = int(input())
 coins = 0
