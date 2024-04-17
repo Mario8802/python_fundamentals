@@ -16,3 +16,27 @@ for current_snowball in range(number_of_snowballs):
         max_quality = current_quality
         max_value = current_value
 print(f"{max_weight} : {max_time} = {int(max_value)} ({max_quality})")
+
+
+
+
+n = int(input())
+
+snowball_value = - 1
+snowball_weight = - 1
+snowball_time = - 1
+snowball_quality = - 1
+
+for _ in range(n):
+    weight = int(input())
+    time = int(input())
+    quality = int(input())
+
+    ball = (weight / time) ** quality
+    if ball > snowball_value:
+        snowball_value = ball
+        snowball_quality = quality
+        snowball_weight = weight
+        snowball_time = time
+
+print(f"{snowball_weight} : {snowball_time} = {int(snowball_value)} ({snowball_quality})")
