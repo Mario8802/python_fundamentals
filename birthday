@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Angelo!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="angelo_birthday.jpg" alt="Angelo's Birthday" class="header-image">
+            <h1 class="header-title">Celebrate Angelo's Birthday in Style!</h1>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#about">About Angelo</a></li>
+                <li><a href="#gallery">Photo Gallery</a></li>
+                <li><a href="#party">Birthday Party Details</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Angelo</h2>
+            <p>[Insert brief introduction and story about Angelo here]</p>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <div class="container">
+            <h2>Photo Gallery</h2>
+            <!-- Insert photo slideshow/grid here -->
+        </div>
+    </section>
+
+    <section id="party">
+        <div class="container">
+            <h2>Birthday Party Details</h2>
+            <p>[Insert party details here]</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <!-- Insert contact form and social media links here -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Angelo's Birthday Bash</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
