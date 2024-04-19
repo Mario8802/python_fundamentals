@@ -15,3 +15,27 @@ for player in players:
 print(f"Team A - {len(team_a)}; Team B - {len(team_b)}")
 if game_over:
     print("Game was terminated")
+
+
+==================================================================================================
+
+team_a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+team_b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+
+cards = input().split()
+for card in cards:
+    team, player = card.split('-')
+    player = int(player)
+
+    if team == "A" and player in team_a:
+        team_a.remove(player)
+    elif team == "B" and player in team_b:
+        team_b.remove(player)
+
+    if len(team_a) < 7 or len(team_b) < 7:
+        print(f"Team A - {len(team_a)}; Team B - {len(team_b)}")
+        print("Game was terminated")
+        break
+
+if len(team_a) >= 7 and len(team_b) >= 7:
+    print(f"Team A - {len(team_a)}; Team B - {len(team_b)}")
