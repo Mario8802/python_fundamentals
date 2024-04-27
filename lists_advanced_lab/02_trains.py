@@ -25,3 +25,34 @@ while True:
         wagons[index] -= number_of_people
 
 print(wagons)
+
+
+
+======================================================================
+
+
+wagons = int(input())
+
+# Initialize train list with zeros
+train = [0] * wagons
+
+while True:
+    command = input().split()
+    if command[0] == "End":
+        break
+    elif command[0] == "add":
+        # Add people to the last wagon
+        train[-1] += int(command[1])
+    elif command[0] == "insert":
+        # Insert people at the specified wagon
+        index = int(command[1])
+        people = int(command[2])
+        train[index] += people
+    elif command[0] == "leave":
+        # Remove people from the specified wagon
+        index = int(command[1])
+        people = int(command[2])
+        train[index] -= people
+
+# Print the train
+print(train)
