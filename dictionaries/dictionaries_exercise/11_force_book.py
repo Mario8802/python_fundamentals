@@ -106,5 +106,52 @@ def get_force_sides():
 if __name__ == '__main__':
     app.run(debug=True)
 
-            
+===================================================================
+
+
+
+class ForceManager:
+    def __init__(self):
+        self.force_side_dict = {}
+
+    def add_user_to_side(self, force_side, force_user):
+        if force_user not in [user for users in self.force_side_dict.values() for user in users]:
+            if force_side not in self.force_side_dict:
+                self.force_side_dict[force_side] = []
+            self.force_side_dict[force_side].append(force_user)
+
+    def change_user_side(self, force_user, force_side):
+        for value in self.force_side_dict.values():
+            if force_user in value:
+                value.remove(force_user)
+                break
+        if force_side not in self.force_side_dict:
+            self.force_side_dict[force_side] = []
+        self.force_side_dict[force_side].append(force_user)
+        print(f"{force_user} joins the {force_side} side!")
+
+    def print_force_sides(self):
+        for force_side, force_users in self.force_side_dict.items():
+            if force_users:
+                print(f"Side: {force_side}, Members: {len(force_users)}")
+                for force_user in force_users:
+                    print(f"! {force_user}")
+
+    def process_commands(self):
+        command = input()
+
+        while command != "Lumpawaroo":
+            if "|" in command:
+                force_side, force_user = command.split(" | ")
+                self.add_user_to_side(force_side, force_user)
+            elif "->" in command:
+                force_user, force_side = command.split(" -> ")
+                self.change_user_side(force_user, force_side)
+            command = input()
+
+        self.print_force_sides()
+
+if __name__ == "__main__":
+    force_manager = ForceManager()
+    force_manager.process_commands()
 
