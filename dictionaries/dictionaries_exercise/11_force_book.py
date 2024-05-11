@@ -54,6 +54,54 @@ for force_side, force_users in force_side_dictionary.items():
 # In case there are no force users on a side, you shouldn't print the side information.
 # Input / Constraints
 #     • The input comes in the form of commands in one of the formats specified above.
+
+
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+force_side_dictionary = {}
+
+@app.route('/add_user', methods=['POST'])
+def add_user():
+    data = request.json
+    force_side = data.get('force_side')
+    force_user = data.get('force_user')
+    if force_side and force_user:
+        if force_user not in force_side_dictionary.values():
+            if force_side not in force_side_dictionary:
+                force_side_dictionary[force_side] = []
+            force_side_dictionary[force_side].append(force_user)
+            return jsonify({'message': f"{force_user} joins the {force_side} side!"}), 200
+        else:
+            return jsonify({'message': 'User already exists.'}), 400
+    else:
+        return jsonify({'message': 'Missing force_side or force_user in request.'}), 400
+
+@app.route('/change_side', methods=['POST'])
+def change_side():
+    data = request.json
+    force_user = data.get('force_user')
+    force_side = data.get('force_side')
+    if force_user and force_side:
+        for value in force_side_dictionary.values():
+            if force_user in value:
+                value.remove(force_user)
+                break
+        if force_side not in force_side_dictionary:
+            force_side_dictionary[force_side] = []
+        force_side_dictionary[force_side].append(force_user)
+        return jsonify({'message': f"{force_user} joins the {force_side} side!"}), 200
+    else:
+        return jsonify({'message': 'Missing force_side or force_user in request.'}), 400
+
+@app.route('/force_sides', methods=['GET'])
+def get_force_sides():
+    return jsonify(force_side_dictionary), 200
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+            
 #     • The input ends when you receive the command "Lumpawaroo".
 # Output
 #     • As output for each force side, you must print all the force users.
