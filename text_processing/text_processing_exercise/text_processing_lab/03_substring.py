@@ -28,3 +28,19 @@ second_string = input()
 manipulator = StringManipulator(first_line, second_string)
 result = manipulator.remove_occurrences()
 print(result)
+
+
+=================================================================
+
+
+first_line = input()
+second_string = input()
+
+while True:
+    index = second_string.find(first_line)
+    if index == -1:
+        break
+    second_string = second_string[:index] + second_string[index + len(first_line):]
+
+print(second_string)
+
