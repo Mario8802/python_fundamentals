@@ -22,3 +22,30 @@ for search in range(searches):
 # Your program should be able to perform a search of contact by name
 # and print its details in the format: "{name} -> {number}".
 # In case the contact isn't found, print: "Contact {name} does not exist."
+
+
+=================================================================================
+
+
+
+
+phone_book = dict()
+
+while True:
+    data = input()
+    if "-" not in data:
+        break
+    name, phone_number = data.split("-")
+
+    phone_book[name] = phone_number
+
+range_of_searching = int(data)
+
+for _ in range(range_of_searching):
+    contact = input()
+    
+    if contact in phone_book.keys():
+        print(f"{contact} -> {phone_book[contact]}")
+
+    else:
+        print(f"Contact {contact} does not exist.")
