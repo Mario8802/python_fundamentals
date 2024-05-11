@@ -54,7 +54,12 @@ for force_side, force_users in force_side_dictionary.items():
 # In case there are no force users on a side, you shouldn't print the side information.
 # Input / Constraints
 #     • The input comes in the form of commands in one of the formats specified above.
-
+#     • The input ends when you receive the command "Lumpawaroo".
+# Output
+#     • As output for each force side, you must print all the force users.
+#     • The output format is:
+# "Side: {force_side}, Members: {force_users_count}
+# ! {force_user1}
 
 from flask import Flask, request, jsonify
 
@@ -102,9 +107,4 @@ if __name__ == '__main__':
     app.run(debug=True)
 
             
-#     • The input ends when you receive the command "Lumpawaroo".
-# Output
-#     • As output for each force side, you must print all the force users.
-#     • The output format is:
-# "Side: {force_side}, Members: {force_users_count}
-# ! {force_user1}
+
