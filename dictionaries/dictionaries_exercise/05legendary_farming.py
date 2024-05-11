@@ -49,3 +49,49 @@ for material, quantity in items.items():
 #     • On the several final lines, print the junk items
 #     • All materials should be printed in the format: "{material}: {quantity}"
 #     • The output should be lowercase, except for the first letter of the legendary
+
+
+
+def obtain_legendary_item():
+    materials = {"shards": 0, "fragments": 0, "motes": 0}
+    junk = {}
+    input_order = []
+
+    legendary_items = {"shards": "Shadowmourne", "fragments": "Valanyr", "motes": "Dragonwrath"}
+
+    while True:
+        data = input().lower().split()
+        for i in range(0, len(data), 2):
+            quantity = int(data[i])
+            material = data[i + 1]
+            input_order.append(material)
+
+            if material in materials:
+                materials[material] += quantity
+
+                if materials[material] >= 250:
+                    print(f"{legendary_items[material]} obtained!")
+                    materials[material] -= 250
+                    # Print remaining materials
+                    print_materials(materials, junk)
+                    return
+            else:
+                if material in junk:
+                    junk[material] += quantity
+                else:
+                    junk[material] = quantity
+
+def print_materials(materials, junk):
+    # Define the materials to be tracked in the order specified
+    tracked_materials = ["shards", "fragments", "motes"]
+
+    for material in tracked_materials:
+        if material in materials:
+            print(f"{material}: {materials[material]}")
+
+    
+    for item, quantity in junk.items():
+        print(f"{item}: {quantity}")
+
+
+obtain_legendary_item()
