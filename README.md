@@ -3,7 +3,7 @@ python fundamentals objectives
 ▪ Working with linear data structures
 
 ▪ Lists
-
+ 
 ▪ Defining functions and simple classes
 
 ▪ Working with dictionaries
