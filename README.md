@@ -4,7 +4,7 @@ Welcome to the **Programming Fundamentals with Python** course repository! This 
 
 <img src="https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png" alt="Python Logo" width="200">
 
-## Table of Contents
+## Table of Contents 
 
 - [Course Overview](#course-overview)
 - [Curriculum](#curriculum)
