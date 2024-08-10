@@ -11,7 +11,7 @@ def binary_search(arr, target):
             end = mid - 1
 
     return -1
-
+ 
 
 list_with_numbers = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 target = 12
