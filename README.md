@@ -6,7 +6,7 @@ Welcome to the **Programming Fundamentals with Python** course repository! This 
 
 ## Table of Contents 
 
-- [Course Overview](#course-overview)
+- [Course Overview](#course-overview) 
 - [Curriculum](#curriculum)
 - [Getting Started](#getting-started)
 - [Assignments](#assignments) 
