@@ -9,7 +9,7 @@ Welcome to the **Programming Fundamentals with Python** course repository! This 
 - [Course Overview](#course-overview)
 - [Curriculum](#curriculum)
 - [Getting Started](#getting-started)
-- [Assignments](#assignments)
+- [Assignments](#assignments) 
 - [Resources](#resources)
 - [Contributing](#contributing)
 - [License](#license)
