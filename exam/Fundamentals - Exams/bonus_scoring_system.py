@@ -1,5 +1,6 @@
-import math
-import sys
+# import math
+# import sys
+from math import ceil
 
 students = int(input())
 lectures = int(input())
