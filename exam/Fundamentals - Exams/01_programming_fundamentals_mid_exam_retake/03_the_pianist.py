@@ -1,7 +1,7 @@
 number = int(input())
 data = {}
 
-for nothing in range(number):
+for _ in range(number):
     piece, composer, key = input().split('|')
     data[piece] = [composer, key]
 
