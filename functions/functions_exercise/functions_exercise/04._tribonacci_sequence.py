@@ -17,5 +17,5 @@ def print_tribonacci(n):
     
     print(" ".join(map(str, sequence)))
 
-n = int(input("Enter the number of Tribonacci terms: "))
+n = int(input())
 print_tribonacci(n)
